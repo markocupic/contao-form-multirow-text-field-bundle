@@ -1,2 +1,5 @@
-# contao-form-multirow-text-field-bundle
- Multirow textfield frontend widget for Contao CMS
+![Alt text](src/Resources/public/logo.png?raw=true "logo")
+
+
+# Welcome to Contao form multirow text field
+This bundle is still under construction.
