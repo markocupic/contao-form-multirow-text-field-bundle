@@ -1,17 +1,14 @@
 <?php
 
-/**
- * This file is part of a markocupic Contao Bundle.
- *
- * (c) Marko Cupic 2020 <m.cupic@gmx.ch>
- * @author     Marko Cupic
- * @package    Contao form multirow text field
- * @license    MIT
- * @see        https://github.com/markocupic/contao-form-multirow-text-field-bundle
- *
- */
-
 declare(strict_types=1);
+
+/*
+ * This file is part of Contao.
+ *
+ * (c) Leo Feyer
+ *
+ * @license LGPL-3.0-or-later
+ */
 
 namespace Markocupic\ContaoFormMultirowTextFieldBundle\Tests\ContaoManager;
 
@@ -23,14 +20,12 @@ use Markocupic\ContaoFormMultirowTextFieldBundle\ContaoManager\Plugin;
 use Markocupic\ContaoFormMultirowTextFieldBundle\MarkocupicContaoFormMultirowTextFieldBundle;
 
 /**
- * Class PluginTest
- *
- * @package Markocupic\ContaoFormMultirowTextFieldBundle\Tests\ContaoManager
+ * Class PluginTest.
  */
 class PluginTest extends ContaoTestCase
 {
     /**
-     * Test Contao manager plugin class instantiation
+     * Test Contao manager plugin class instantiation.
      */
     public function testInstantiation(): void
     {
@@ -38,7 +33,7 @@ class PluginTest extends ContaoTestCase
     }
 
     /**
-     * Test returns the bundles
+     * Test returns the bundles.
      */
     public function testGetBundles(): void
     {
@@ -52,5 +47,4 @@ class PluginTest extends ContaoTestCase
         $this->assertSame(MarkocupicContaoFormMultirowTextFieldBundle::class, $bundles[0]->getName());
         $this->assertSame([ContaoCoreBundle::class], $bundles[0]->getLoadAfter());
     }
-
 }

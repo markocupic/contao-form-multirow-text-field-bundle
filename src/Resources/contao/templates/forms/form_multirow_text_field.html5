@@ -23,11 +23,13 @@ $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/markocupiccontaoformmultirowtextfield/js/
 
 <input type="hidden" name="<?= rtrim($this->name, '[]') ?>" value="">
 
-<?php if(empty($this->value))$this->value = ['']; ?>
+<?php if (empty($this->value)) {
+    $this->value = [''];
+} ?>
 <div>
     <table id="multiRowTextFieldTable_<?= $this->id ?>">
     <tbody>
-    <?php foreach ($this->value as $k => $strValue): ?>
+    <?php foreach ($this->value as $strValue): ?>
     <tr>
         <td>
             <input type="<?= $this->type ?>" name="<?= $this->name ?>[]" class="text<?php if ($this->hideInput): ?> password<?php endif; ?><?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>" value="<?= Contao\StringUtil::specialchars($strValue) ?>"<?= $this->getAttributes() ?>>
